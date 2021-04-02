@@ -1,0 +1,125 @@
+html {
+    padding-top: 2%;
+    padding-left: 7%;
+    padding-right: 7%;
+    background-image: url('..//images/background.jpg');
+    background-size: cover;
+    background-position: 0 8%;
+}
+
+#gameTitle {
+    text-align: center;
+    margin-top: -2%;
+    margin-bottom: 4%;
+}
+
+#gameMode, #difficulty {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#otherSettings, #gameMode input, #difficulty input, #other3 {
+    margin-left: 15px;
+}
+
+#otherSettings div:first-of-type, #players {
+    margin-top: 10px;
+}
+
+#gamePage, #endScreen div:not(#endTime) {
+    margin-top: 5%;
+}
+
+img {
+    height: 150px;
+}
+
+#game {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5px;
+    max-height: 70%;
+    display: block;
+}
+
+#players td {
+    width: 75px;
+    padding-left: 10px;
+}
+
+#players {
+    margin-bottom: 1%;
+}
+
+#messageForSelection, #messageForOther {
+    font-weight: bold;
+}
+
+#endScreen {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+#endScreen div:not(#endTime) {
+    font-size: 6em;
+    margin-bottom: 2%;
+}
+
+#endTime {
+    margin-bottom: 1%;
+}
+
+#scores {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+    font-size: 3em;
+    text-align: left;
+    width: 80%;
+    border-collapse: collapse;
+}
+
+#scores tr td:nth-child(3), #scores th:nth-child(3) {
+    text-align: right;
+}
+
+#scores tr td:nth-child(2), #scores th:nth-child(2) {
+    text-align: center;
+}
+
+#scores tr:nth-child(1) {
+    border-bottom: 1px solid black;
+}
+
+#remainingCards, #elapsedTime {
+    margin-left: 1%;
+    font-style: italic;
+}
+
+#elapsedTime {
+    margin-left: 25px;
+}
+
+.correct {
+    color: green;
+}
+
+.incorrect {
+    color: red;
+}
+
+.selectedByComputer {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px 3px #ef8787;
+    border-radius: 5px;
+    border-bottom: 0px;
+}
+
+.selected {
+    outline: none;
+    border-color: #9ecaed;
+    box-shadow: 0 0 10px 3px #87c0ef;
+    border-radius: 5px;
+    border-bottom: 0px;
+}

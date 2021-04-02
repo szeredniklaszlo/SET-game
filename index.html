@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>SET játék - Szerednik László Tamás - HSQ25L</title>
+</head>
+<body>
+    <div id="openingPage">
+        <h1 id="gameTitle">SET játék</h1>
+
+        <label for="numOfPlayers">Add meg a játékosok számát: </label>
+        <input id="numOfPlayers" type="number" min="1" max="10" value="1"><br>
+        <span id="nameOfPlayers">
+            <label for="nameOfPlayer1">1. játékos neve: </label>
+            <input id="nameOfPlayer1" type="text" value="Játékos1"><br>
+        </span>
+
+        <div id="gameMode">
+            <div>Válaszd ki a játék módját:</div>
+            <input id="practice" type="radio" name="gameMode" value="practice" checked>
+            <label for="practice">Gyakorló</label><br>
+
+            <input id="competition"  type="radio" name="gameMode" value="competition">
+            <label for="competition">Verseny</label>
+        </div>
+
+        <div id="difficulty">
+            <div>Válaszd ki a nehézséget:</div>
+            <input id="deckWith27Cards" type="radio" name="difficulty" value="deckWith27Cards" checked>
+            <label for="deckWith27Cards">3 tulajdonság</label><br>
+
+            <input id="deckWith81Cards" type="radio" name="difficulty" value="deckWith81Cards">
+            <label for="deckWith81Cards">4 tulajdonság</label>
+        </div>
+
+        <div id="otherSettingsText">Egyéb beállítások:</div>
+        <div id="otherSettings">
+            <input id="showHasSETButton"  type="checkbox" name="other1" value="showHasSETButton">
+            <label for="showHasSETButton">Legyen olyan gomb az oldalon, amelyre kattintva a gép megmondja, van-e SET a leosztásban</label><br>
+
+            <input id="showShowSETButton" type="checkbox" name="other2" value="showShowSETButton">
+            <label for="showShowSETButton">Legyen olyan gomb, amelyre kattintva a gép mutat egy SET-et</label>
+
+            <div>A plusz 3 lapos kiegészítés módja:</div>
+            <div id="other3">
+                <input id="automatic" type="radio" name="other3" value="automatic" checked>
+                <label for="automatic">Automatikus</label><br>
+
+                <input id="manual"  type="radio" name="other3" value="manual">
+                <label for="manual">Manuális</label>
+            </div>
+        </div>
+
+        <p id="rules">A játékszabályok megtekintésére a következő linken van lehetőséged: <a href="https://fejlesztojatekvilag.hu/uploaded/set_magyar_szabaly.pdf" target="_blank">Játékszabályok</a></p>
+
+        <button id="startButton">Start</button>
+    </div>
+
+    <div id="gamePage">
+        <table id="game">
+        </table>
+        <button id="hasSETButton" hidden>Van SET?</button>
+        <button id="showSETButton" hidden>Mutass egy SET-et!</button>
+        <button id="draw3CardButton" hidden>+3 lap</button>
+        <span id="remainingCards"></span>   <span id="elapsedTime"></span>
+
+        <table id="players">
+
+        </table>
+        <div id="messageForSelection" hidden></div>
+        <div id="messageForOther" hidden></div>
+    </div>
+
+    <div id="endScreen" hidden>
+        <div>Vége a játéknak!</div>
+        <table id="scores">
+        </table>
+        <div id="endTime"></div>
+        <button id="restart">Új játék!</button>
+        <button id="home">Főoldalra!</button>
+    </div>
+
+    <script src="js/settings.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
